@@ -32,7 +32,7 @@ export default function Home() {
       style={{
         background: "#94E5D3",
       }}
-      className={`flex min-h-[calc(100vh)] flex-col items-center p-24 ${inter.className}`}
+      className={`flex  min-[500px]:min-h-[calc(100vh-17p)] min-[0px]:min-h-[calc(100vh)] flex-col items-center p-24 ${inter.className}`}
     >
       <Image
         className="absolute top-0 left-0"
@@ -49,11 +49,11 @@ export default function Home() {
         alt={""}
       />
       <img
-        className="absolute bottom-0 left-0 w-3/4"
+        className="min-[500px]:block min-[0px]:hidden absolute bottom-0 left-0 w-3/4 z-4"
         src={"/cloud.svg"}
         alt={""}
       />
-      <div className="flex absolute bottom-0 right-0 m-8">
+      <div className="flex absolute bottom-0 right-0 m-8 z-1">
         {(isPlay) && (
           <img width={100} height={70} src={"/song.gif"} alt={""} />
         )}
