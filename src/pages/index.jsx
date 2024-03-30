@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [days, hours, minutes, seconds] = useCountdown("04/04/2024 00:00:00");
-  const [isHover, setIsHover] = useState(false);
   const [isPlay, setIsPlay] = useState(false);
   const [play, { stop }] = useSound("/happy.mp3", { volume: 0.5 });
 
@@ -55,20 +54,13 @@ export default function Home() {
         alt={""}
       />
       <div className="flex absolute bottom-0 right-0 m-8">
-        {(isHover || isPlay) && (
+        {(isPlay) && (
           <img width={100} height={70} src={"/song.gif"} alt={""} />
         )}
         <img
           src={"/harp.svg"}
           alt={""}
-          onMouseEnter={() => {
-            setIsHover(true);
-            setIsPlay(!isPlay);
-          }}
           onClick={() => setIsPlay(!isPlay)}
-          onMouseLeave={() => {
-            setIsHover(false);
-          }}
         />
       </div>
       <div className="font-libre md:text-6xl sm:text-xl text-white text-center">
