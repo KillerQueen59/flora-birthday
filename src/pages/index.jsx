@@ -32,7 +32,7 @@ export default function Home() {
       style={{
         background: "#94E5D3",
       }}
-      className={`flex lg:min-h-[calc(100vh-17px)] md:min-h-[calc(100vh-17px)] sm:min-h-[calc(100vh-5px)]   flex-col items-center p-24 ${inter.className}`}
+      className={`flex min-h-[calc(100vh)] flex-col items-center p-24 ${inter.className}`}
     >
       <Image
         className="absolute top-0 left-0"
