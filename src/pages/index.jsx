@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useCountdown } from "./useCountdown";
+import { useCountdown } from "../useCountdown";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
@@ -26,7 +26,7 @@ export default function Home() {
     } else {
       stop();
     }
-  }, [isPlay]);
+  }, [isPlay, play, stop]);
 
   return (
     <main
